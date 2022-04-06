@@ -17,8 +17,6 @@ export const useHomeFetch = () => {
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [sortByLatest, setSortByLatest] = useState(false)
 
-  console.log(sortByLatest)
-
   const fetchMovies = async (page, sorted) => {
     try {
       setError(false);

@@ -18,8 +18,7 @@ import NoImage from '../images/no_image.jpg';
 
 const Home = () => {
   const { state, loading, error, sortByLatest, setIsLoadingMore, setSortByLatest } = useHomeFetch();
-
-  console.log(state)
+  
   if (error) return <div>Something went wrong...</div>
   return (
     <>

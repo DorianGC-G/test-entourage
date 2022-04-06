@@ -34,7 +34,7 @@ const Movie = () => {
         budget={movie.budget}
         revenue={movie.revenue}
       />
-      <Grid header={movie.recommended.results ? '' : 'Other movies you may like'}>
+      <Grid header={!movie.recommended.results.length ? '' : 'Other movies you may like:'}>
         {movie.recommended.results.map(reco => (
           <Thumb
             key={reco.id}
