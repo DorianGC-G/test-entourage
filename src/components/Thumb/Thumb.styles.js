@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+`
+
 export const Image = styled.img`
   width: 100%;
   max-width: 720px;

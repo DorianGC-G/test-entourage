@@ -19,6 +19,10 @@ const apiSettings = {
   fetchCredits: async movieId => {
     const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
     return await (await fetch(creditsEndpoint)).json();
+  },
+  fetchRecommended: async movieId => {
+    const recommendationsEndpoint = `${API_URL}movie/${movieId}/recommendations?api_key=${API_KEY}`;
+    return await (await fetch(recommendationsEndpoint)).json();
   }
 };
 
