@@ -43,6 +43,7 @@ const Movie = () => {
                 : NoImage }
             clickable={true}
             movieId={reco.id}
+            title={reco.title}
           />
         ))}
       </Grid>

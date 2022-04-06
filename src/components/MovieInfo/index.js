@@ -22,7 +22,7 @@ const MovieInfo = ({ movie }) => (
           : NoImage
         }
         clickable={false}
-        className="movie-info-thumb"
+        id="no-title"
       />
       <Text>
         <h1>{movie.title}</h1>

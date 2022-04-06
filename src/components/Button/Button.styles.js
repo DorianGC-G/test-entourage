@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Wrapper = styled.button`
   display: block;
-  background: var(--darkGray);
-  width: 25%;
+  background: var(--lightGray);
+  border: 2px solid var(--darkGray);
+  width: 15%;
   min-width: 200px;
-  height: 60px;
-  border-radius: 30px;
-  color: var(--white);
-  border: 0;
+  height: 50px;
+  border-radius: 10px;
+  color: var(--black);
   font-size: var(--fontL);
   margin: 20px auto;
   transition: all 0.3s;
@@ -16,11 +16,11 @@ export const Wrapper = styled.button`
   cursor: pointer;
 
   :hover {
-    opacity: 0.5;
+    background: var(--medGray);
+    color: var(--white);
   }
+
   &#sort-button {
     font-size: var(--fontM);
-    width: 10%;
-    height: 40px;
   }
 `
