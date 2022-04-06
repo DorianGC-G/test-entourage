@@ -36,7 +36,7 @@ const Home = () => {
         callback={() => sortByLatest ? setSortByLatest(false) : setSortByLatest(true)}
         id="sort-button"
       />
-      <Grid header="Now Playing">
+      <Grid header={sortByLatest ? "Latest Releases" : "Now Playing"}>
         {state.results.map(movie => (
           <Thumb
             key={movie.id}
