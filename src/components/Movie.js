@@ -9,6 +9,8 @@ import Grid from "./Grid";
 import Spinner from "./Spinner";
 import BreadCrumb from "./BreadCrumb";
 import MovieInfo from "./MovieInfo";
+import MovieInfoBar from "./MovieInfoBar";
+import Thumb from "./Thumb";
 
 // Hook
 import { useMovieFetch } from "../hooks/useMovieFetch";
@@ -27,6 +29,23 @@ const Movie = () => {
     <>
       <BreadCrumb movieTitle={movie.original_title} />
       <MovieInfo movie={movie} />
+      <MovieInfoBar 
+        time={movie.runtime}
+        budget={movie.budget}
+        revenue={movie.revenue}
+      />
+      <Grid header={movie.recommended.results ? '' : 'Other movies you may like'}>
+        {movie.recommended.results.map(reco => (
+          <Thumb
+            key={reco.id}
+            image={reco.poster_path
+                ? IMAGE_BASE_URL + POSTER_SIZE + reco.poster_path
+                : NoImage }
+            clickable={true}
+            movieId={reco.id}
+          />
+        ))}
+      </Grid>
     </>
   );
 };
