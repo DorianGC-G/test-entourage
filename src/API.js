@@ -6,10 +6,10 @@ import {
 } from './config';
 
 const apiSettings = {
-  fetchMovies: async (searchTerm, page) => {
-    const endpoint = searchTerm
-      ? `${NOW_PLAYING_BASE_URL}${searchTerm}&page=${page}`
-      : `${NOW_PLAYING_SORTED_BASE_URL}&page=${page}`;
+  fetchMovies: async (sorted, page) => {
+    const endpoint = sorted
+      ? `${NOW_PLAYING_SORTED_BASE_URL}&page=${page}`
+      : `${NOW_PLAYING_BASE_URL}$&page=${page}`;
     return await (await fetch(endpoint)).json();
   },
   fetchMovie: async movieId => {

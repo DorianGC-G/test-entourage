@@ -6,7 +6,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const TODAY = formatDate(new Date())
 
 const NOW_PLAYING_BASE_URL = `${API_URL}discover/movie?api_key=${API_KEY}&with_release_type=3&watch_region=eu`;
-const NOW_PLAYING_SORTED_BASE_URL = `${API_URL}discover/movie/?api_key=${API_KEY}&release_date.lte=${TODAY}&with_release_type=3&watch_region=eu`;
+const NOW_PLAYING_SORTED_BASE_URL = `${API_URL}discover/movie/?api_key=${API_KEY}&release_date.lte=${TODAY}&with_release_type=3&watch_region=eu&sort_by=release_date.desc`;
 const IMAGE_BASE_URL = 'http://image.tmdb.org/t/p/';
 // Sizes: w300, w780, w1280, original
 const BACKDROP_SIZE = 'w1280';

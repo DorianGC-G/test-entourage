@@ -18,4 +18,9 @@ export const Wrapper = styled.button`
   :hover {
     opacity: 0.5;
   }
+  &#sort-button {
+    font-size: var(--fontM);
+    width: 10%;
+    height: 40px;
+  }
 `

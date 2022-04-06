@@ -17,20 +17,25 @@ import { useHomeFetch } from '../hooks/useHomeFetch';
 import NoImage from '../images/no_image.jpg';
 
 const Home = () => {
-  const { state, loading, error, setIsLoadingMore } = useHomeFetch();
+  const { state, loading, error, sortByLatest, setIsLoadingMore, setSortByLatest } = useHomeFetch();
 
   console.log(state)
   if (error) return <div>Something went wrong...</div>
   return (
     <>
-      {state.results[0] ? (
+      {!sortByLatest && state.results[0] ? (
         <HeroImage 
           image={IMAGE_BASE_URL + BACKDROP_SIZE + state.results[0].backdrop_path}
           title={state.results[0].original_title}
           text={state.results[0].overview}
           />
         ) : null
-      }
+      } 
+      <Button 
+        text={sortByLatest ? 'Sort by popularity' : 'Sort by latest release'} 
+        callback={() => sortByLatest ? setSortByLatest(false) : setSortByLatest(true)}
+        id="sort-button"
+      />
       <Grid header="Now Playing">
         {state.results.map(movie => (
           <Thumb
