@@ -1,16 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Components
-import Thumb from '../Thumb';
+import Thumb from "../Thumb";
 
 // Config
 import { IMAGE_BASE_URL, POSTER_SIZE } from "../../config";
 
 // Image
-import NoImage from '../../images/no_image.jpg';
+import NoImage from "../../images/no_image.jpg";
 
 // Styles
-import { Wrapper, Content, Text } from './MovieInfo.styles';
+import { Wrapper, Content, Text } from "./MovieInfo.styles";
 
 const MovieInfo = ({ movie }) => (
   <Wrapper backdrop={movie.backdrop_path}>
@@ -18,8 +19,8 @@ const MovieInfo = ({ movie }) => (
       <Thumb
         image={
           movie.poster_path
-          ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
-          : NoImage
+            ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
+            : NoImage
         }
         clickable={false}
         id="no-title"
@@ -34,16 +35,19 @@ const MovieInfo = ({ movie }) => (
             <div className="score">{movie.vote_average}</div>
           </div>
           <div className="directors">
-            <h3>Director{movie.directors.length > 1 ? 's' : ''}</h3>
-            {movie.directors.map(director => (
+            <h3>Director{movie.directors.length > 1 ? "s" : ""}</h3>
+            {movie.directors.map((director) => (
               <p key={director.credit_id}>{director.name}</p>
-              ))}
+            ))}
           </div>
         </div>
       </Text>
     </Content>
-
   </Wrapper>
 );
+
+MovieInfo.propTypes = {
+  movie: PropTypes.object,
+};
 
 export default MovieInfo;

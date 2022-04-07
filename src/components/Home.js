@@ -31,7 +31,7 @@ const Home = () => {
         ) : null
       } 
       <Button 
-        text={sortByLatest ? 'Sort by popularity' : 'Sort by latest release'} 
+        text={sortByLatest ? 'Sort by popularity' : 'Sort by latest releases'} 
         callback={() => sortByLatest ? setSortByLatest(false) : setSortByLatest(true)}
         id="sort-button"
       />

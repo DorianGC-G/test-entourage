@@ -23,4 +23,4 @@ export const Wrapper = styled.button`
   &#sort-button {
     font-size: var(--fontM);
   }
-`
+`;

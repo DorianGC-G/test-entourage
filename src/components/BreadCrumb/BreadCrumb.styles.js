@@ -23,9 +23,8 @@ export const Content = styled.div`
     color: var(--white);
     padding-right: 10px;
 
-
     @media screen and (max-width: 768px) {
       font-size: var(--fontS);
     }
   }
-;`
+`;

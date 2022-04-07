@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   min-height: 100px;
   background: var(--darkGray);
   padding: 0 20px;
-`
+`;
 export const Content = styled.div`
   display: flex;
   max-width: var(--maxWidth);
@@ -21,7 +21,7 @@ export const Content = styled.div`
     border-radius: 10px;
     margin: 0 20px;
     flex: 1;
-    
+
     :first-child {
       margin-left: 0;
     }
@@ -37,4 +37,4 @@ export const Content = styled.div`
       margin: 20px 0;
     }
   }
-`
+`;
