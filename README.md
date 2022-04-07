@@ -2,6 +2,8 @@
 ## Test technique pour Entourage
 Voici quelques infos autour de mon projet créé pour le test technique de l\'[association Entourage](https://www.entourage.social/), et quelques explications sur les choix réalisés. Vous pouvez retrouver la version déployée [ici](https://wonderful-rugelach-1edc48.netlify.app/).
 
+Le projet dans son état actuel a été réalisé en environ 10h, étalés sur 3 jours.
+
 L\'interface permet aux utilisateurs de voir les films les plus populaires parmis ceux récemment sortis. Ils peuvent choisir de les trier par ordre de sortie. Un premier tri est effectué lors du call api, la requête filtre uniquement les films sortis au cinéma, en Europe, ayant un score supérieure à 1.
 
 En cliquant sur l\'affiche d\'un film, on arrive sur une page descriptive où l\'on retrouve le synopsis du film, son affiche, son score, le réalisateur, la durée, le budget et les bénéfices du film. En descendant, on retrouve également les films recommandés s\'il y en a.
